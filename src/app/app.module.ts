@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ExchangesComponent } from './exchanges/exchanges.component';
 import { StatusComponent } from './status/status.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ExchangesComponent,
-    StatusComponent
+    StatusComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
