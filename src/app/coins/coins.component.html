@@ -9,6 +9,7 @@
                     <p class="card-text"><b>Current Price:</b> {{coin.current_price | currency}}</p>
                     <p class="card-text"><b>Market Cap:</b> {{coin.market_cap | currency}}</p>
                     <p class="card-text"><b>All Time High:</b> {{coin.ath | currency}}</p>
+                    <p class="card-text"><b>Circulating Supply:</b> {{coin.circulating_supply| number: '1.0-0'}}</p>
                 </div>
             </div>
         </div>
