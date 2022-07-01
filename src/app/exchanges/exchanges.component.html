@@ -1,6 +1,20 @@
-<div *ngFor='let exchange of coinGeckoResponse'>
+<!-- <div *ngFor='let exchange of coinGeckoResponse'>
     <img src="{{exchange.image}}" />
     <p>Name: {{exchange.name}}</p>
     <p>Year Established: {{exchange.year_established}}</p>
     <p>Country: {{exchange.country}}</p>
+</div> -->
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col" *ngFor='let exchange of coinGeckoResponse'>
+            <div class="card">
+                <img src="{{exchange.image}}" class="img-thumbnail" width="60" height="60">
+                <div class="card-body">
+                    <h2 class="card-title">{{exchange.name}}</h2>
+                    <p class="card-text">Year Established: {{exchange.year_established}}</p>
+                    <p class="card-text">Country: {{exchange.country}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
