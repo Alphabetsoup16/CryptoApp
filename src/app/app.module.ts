@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ExchangesComponent } from './exchanges/exchanges.component';
 import { StatusComponent } from './status/status.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { CoinsComponent } from './coins/coins.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     AppComponent,
     ExchangesComponent,
     StatusComponent,
-    NavbarComponent
+    NavbarComponent,
+    CoinsComponent
   ],
   imports: [
     BrowserModule,
