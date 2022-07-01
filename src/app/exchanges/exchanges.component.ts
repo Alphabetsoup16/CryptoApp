@@ -8,12 +8,12 @@ import { CoinGeckoService } from '../coin-gecko.service';
 })
 export class ExchangesComponent implements OnInit {
 
-  coinGeckoResponse: any = [];
+  exchangesResponse: any = [];
   constructor(private coinGecko: CoinGeckoService) { }
 
   ngOnInit(): void {
     this.coinGecko.getAllExchanges().subscribe((data) => {
-      this.coinGeckoResponse = data;
+      this.exchangesResponse = data;
       console.log(data);
     })
   }
