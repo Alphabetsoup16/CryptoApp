@@ -1,1 +1,15 @@
-<p>coins works!</p>
+<div class="container mt-4">
+    <div class="row row-cols-1 row-cols-md-4 g-3">
+        <div class="col" *ngFor='let coin of coinsResponse'>
+            <div class="card shadow-sm bg-light bg-gradient">
+                <img src="{{coin.image}}" class="img-thumbnail" width="50" height="50" />
+                <div class="card-body">
+                    <h2 class="card-title">{{coin.name}}</h2>
+                    <p class="card-text"><b>Current Price:</b> {{coin.current_price | currency}}</p>
+                    <p class="card-text"><b>Market Cap:</b> {{coin.market_cap | currency}}</p>
+                    <p class="card-text"><b>All Time High:</b> {{coin.ath | currency}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
