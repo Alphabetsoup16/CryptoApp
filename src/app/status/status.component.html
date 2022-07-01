@@ -1,16 +1,12 @@
-<div *ngIf="status === 200; else elseBlock" class="my-3 ms-2">
-    <button type="button" class="btn btn-primary position-relative" disabled>
-        API Status
-        <span
-            class="position-absolute top-0 start-100 translate-middle p-2 bg-success border border-light rounded-circle">
-        </span>
-    </button>
+<div class="text-end">
+    <div *ngIf="status === 200; else elseBlock" class="ms-2">
+        <button type="button" class="btn btn-primary position-relative">
+            Status ✅
+        </button>
+    </div>
+    <ng-template #elseBlock>
+        <button type="button" class="btn btn-primary position-relative">
+            Status ❌
+        </button>
+    </ng-template>
 </div>
-<ng-template #elseBlock>
-    <button type="button" class="btn btn-primary position-relative" disabled>
-        Status
-        <span
-            class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
-        </span>
-    </button>
-</ng-template>
