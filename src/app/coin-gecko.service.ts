@@ -7,10 +7,15 @@ import { HttpClient } from '@angular/common/http';
 
 export class CoinGeckoService {
   private readonly EXCHANGE_API_URL: string = "https://api.coingecko.com/api/v3/exchanges"
+  private readonly PING_API_URL: string = "https://api.coingecko.com/api/v3/ping"
 
-  constructor(private http : HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  public getAllExchanges() { 
-    return this.http.get(this.EXCHANGE_API_URL); 
-    } 
+  public getApiPing() {
+    return this.http.get(this.PING_API_URL, { observe: 'response' });
+  }
+
+  public getAllExchanges() {
+    return this.http.get(this.EXCHANGE_API_URL);
+  }
 }

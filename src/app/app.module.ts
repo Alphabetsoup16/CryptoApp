@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ExchangesComponent } from './exchanges/exchanges.component';
+import { StatusComponent } from './status/status.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ExchangesComponent
+    ExchangesComponent,
+    StatusComponent
   ],
   imports: [
     BrowserModule,
