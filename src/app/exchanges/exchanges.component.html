@@ -1,12 +1,15 @@
 <div class="container">
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="row row-cols-1 row-cols-md-3 g-3">
         <div class="col" *ngFor='let exchange of coinGeckoResponse'>
-            <div class="card">
-                <img src="{{exchange.image}}" class="img-thumbnail" width="60" height="60">
+            <div class="card shadow-sm bg-light bg-gradient">
+                <a href="{{exchange.url}}" target="_blank">
+                    <img src="{{exchange.image}}" class="img-thumbnail" width="50" height="50">
+                </a>
                 <div class="card-body">
                     <h2 class="card-title">{{exchange.name}}</h2>
-                    <p class="card-text">Year Established: {{exchange.year_established}}</p>
-                    <p class="card-text">Country: {{exchange.country}}</p>
+                    <p class="card-text"><b>Trust Score:</b> {{exchange.trust_score}}</p>
+                    <p class="card-text"><b>Year Established:</b> {{exchange.year_established}}</p>
+                    <p class="card-text"><b>Country:</b> {{exchange.country || "Unknown"}}</p>
                 </div>
             </div>
         </div>
