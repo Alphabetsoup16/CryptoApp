@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -14,15 +15,15 @@ export class CoinGeckoService {
     return this.http.get(`${this.BASE_API_URL}/ping`, { observe: 'response' });
   }
 
-  public getTop100Coins() {
-    return this.http.get(`${this.BASE_API_URL}/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false`);
+  public getTop100Coins(): Observable<any> {
+    return this.http.get<any>(`${this.BASE_API_URL}/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false`);
   }
 
   public getSpecificCoin(coin_id: string) {
     return this.http.get(`${this.BASE_API_URL}/coins/${coin_id}`);
   }
 
-  public getAllExchanges() {
-    return this.http.get(`${this.BASE_API_URL}/exchanges`);
+  public getAllExchanges(): Observable<any> {
+    return this.http.get<any>(`${this.BASE_API_URL}/exchanges`);
   }
 }
