@@ -14,7 +14,6 @@ export class ExchangesComponent implements OnInit {
   ngOnInit(): void {
     this.coinGecko.getAllExchanges().subscribe((data) => {
       this.exchangesResponse = data;
-      console.log(data);
     })
   }
 
