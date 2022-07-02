@@ -11,7 +11,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## TODOS:
-- Conditional logic on the Coin prices to show very small amounts
 - Create a home page
 - Modal for each coin that pulls up more specific stats
 - Modal for each coins description or opens description component?
