@@ -25,7 +25,7 @@
                     <p class="card-text"><b>Market Cap:</b> {{coin.market_cap | currency}}</p>
                     <p class="card-text"><b>Supply:</b> {{coin.circulating_supply | number}}</p>
                 </div>
-
+                <a class="btn btn-primary" routerLink="/details/{{coin.id}}" role="button">More Info</a>
             </div>
         </div>
     </div>

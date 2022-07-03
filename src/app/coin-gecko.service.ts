@@ -19,7 +19,7 @@ export class CoinGeckoService {
     return this.http.get<any>(`${this.BASE_API_URL}/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false`);
   }
 
-  public getSpecificCoin(coin_id: string) {
+  public getSpecificCoin(coin_id: string | null) {
     return this.http.get(`${this.BASE_API_URL}/coins/${coin_id}`);
   }
 

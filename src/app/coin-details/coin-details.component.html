@@ -1,0 +1,6 @@
+<div *ngIf="coin">
+    <p>coin-details works!</p>
+    <h2>{{coin.name | uppercase}} Details</h2>
+    <div>id: {{coin.id}}</div>
+    <button type="button" (click)="goBack()">Back</button>
+</div>
