@@ -7,9 +7,9 @@
         <div class="card-body">
             <p class="text-wrap ms-auto me-auto" style=" text-indent: 2em; width: 60em;" [innerHTML]="coinDescription">
             </p>
-            <p><b>Developer Score:</b> {{coin.developer_score}}</p>
+            <p><b>Developer Score:</b> {{coin.developer_score || "Unknown"}}</p>
             <p><b>Genesis Block:</b> {{coin.genesis_date | date:'longDate'}}</p>
-            <p><b>Hash Algorithm:</b> {{coin.hashing_algorithm}}</p>
+            <p><b>Hash Algorithm:</b> {{coin.hashing_algorithm || "N/A"}}</p>
             <button type="button" class="btn btn-primary" (click)="goBack()">Back</button>
         </div>
     </div>
