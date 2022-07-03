@@ -2,10 +2,11 @@
     <div class="card p-3 bg-light">
         <div class=" text-center">
             <img src="{{coin.image['large']}}" class="img-thumbnail border-0" width="200" height="200" />
-            <h1 class="card-title">{{coin.name}} Details</h1>
+            <h1 class="card-title mt-1">{{coin.name}} Details</h1>
         </div>
         <div class="card-body">
-            <p style="text-indent: 2em;" [innerHTML]="coinDescription"></p>
+            <p class="text-wrap ms-auto me-auto" style=" text-indent: 2em; width: 60em;" [innerHTML]="coinDescription">
+            </p>
             <p><b>Developer Score:</b> {{coin.developer_score}}</p>
             <p><b>Genesis Block:</b> {{coin.genesis_date | date:'longDate'}}</p>
             <p><b>Hash Algorithm:</b> {{coin.hashing_algorithm}}</p>
