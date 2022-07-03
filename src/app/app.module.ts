@@ -10,6 +10,7 @@ import { StatusComponent } from './status/status.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CoinsComponent } from './coins/coins.component';
 import { CoinDetailsComponent } from './coin-details/coin-details.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { CoinDetailsComponent } from './coin-details/coin-details.component';
     StatusComponent,
     NavbarComponent,
     CoinsComponent,
-    CoinDetailsComponent
+    CoinDetailsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
