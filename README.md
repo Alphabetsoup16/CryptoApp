@@ -12,8 +12,11 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## TODOS:
 - Create a home page
-- Modal for each coin that pulls up more specific stats
-- Modal for each coins description or opens description component?
-- Search functionality 
+- Modal or component for each coin that pulls up more specific stats
+- Search functionality?
 - New favicon
-- more styling overall 
+- more styling overall
+- Interfaces for Coin/Details/Exchanges (pipe/map responses)
+- Finalize coin-details component
+- Figure out better way to display coin detail paragraph (INNERHTML)
+
