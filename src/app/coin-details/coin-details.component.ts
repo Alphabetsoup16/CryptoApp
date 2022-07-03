@@ -11,6 +11,7 @@ import { Location } from '@angular/common';
 export class CoinDetailsComponent implements OnInit {
 
   coin: any | undefined;
+  coinDescription: string | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -25,7 +26,12 @@ export class CoinDetailsComponent implements OnInit {
   getCoinDetails(): void {
     const id = this.route.snapshot.paramMap.get('id');
     this.coinGecko.getSpecificCoin(id)
-      .subscribe(coin => this.coin = coin);
+      .subscribe((coin: any) => {
+        this.coin = coin
+        this.coinDescription = coin?.description['en']
+        console.log(coin)
+      })
+
   }
 
   goBack(): void {

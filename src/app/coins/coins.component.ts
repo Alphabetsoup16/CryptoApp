@@ -14,7 +14,6 @@ export class CoinsComponent implements OnInit {
   ngOnInit(): void {
     this.coinGecko.getTop100Coins().subscribe((data) => {
       this.coinsResponse = data;
-      console.log(data)
     })
   }
 

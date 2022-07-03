@@ -1,6 +1,15 @@
 <div *ngIf="coin">
-    <p>coin-details works!</p>
-    <h2>{{coin.name | uppercase}} Details</h2>
-    <div>id: {{coin.id}}</div>
-    <button type="button" (click)="goBack()">Back</button>
+    <div class="card p-3 bg-light">
+        <div class=" text-center">
+            <img src="{{coin.image['large']}}" class="img-thumbnail border-0" width="200" height="200" />
+            <h1 class="card-title">{{coin.name}} Details</h1>
+        </div>
+        <div class="card-body">
+            <p style="text-indent: 2em;" [innerHTML]="coinDescription"></p>
+            <p><b>Developer Score:</b> {{coin.developer_score}}</p>
+            <p><b>Genesis Block:</b> {{coin.genesis_date | date:'longDate'}}</p>
+            <p><b>Hash Algorithm:</b> {{coin.hashing_algorithm}}</p>
+            <button type="button" class="btn btn-primary" (click)="goBack()">Back</button>
+        </div>
+    </div>
 </div>
