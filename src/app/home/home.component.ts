@@ -10,7 +10,6 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    document.body.classList.add('graphic');
   }
 
 }
