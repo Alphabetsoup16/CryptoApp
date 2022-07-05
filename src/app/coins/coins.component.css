@@ -9,3 +9,13 @@
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
 }
+
+.coin-form {
+    min-width: 150px;
+    max-width: 300px;
+    width: 100%;
+}
+
+.coin-full-width {
+    width: 100%;
+}
