@@ -10,8 +10,8 @@ import { Location } from '@angular/common';
 })
 export class CoinDetailsComponent implements OnInit {
 
-  coin: any | undefined;
-  coinDescription: string | undefined;
+  coin?: any;
+  coinDescription?: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -31,7 +31,6 @@ export class CoinDetailsComponent implements OnInit {
         this.coinDescription = coin?.description['en']
         console.log(coin)
       })
-
   }
 
   goBack(): void {
