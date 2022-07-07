@@ -21,6 +21,7 @@ export class CoinDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCoinDetails();
+    this.getCoinDetails2();
   }
 
   getCoinDetails(): void {
@@ -30,6 +31,14 @@ export class CoinDetailsComponent implements OnInit {
         this.coin = coin
         this.coinDescription = coin?.description['en']
         console.log(coin)
+      })
+  }
+
+  getCoinDetails2(): void {
+    const id = this.route.snapshot.paramMap.get('id');
+    this.coinGecko.getSpecificCoin2(id)
+      .subscribe((coin2: any) => {
+        console.log(coin2)
       })
   }
 
