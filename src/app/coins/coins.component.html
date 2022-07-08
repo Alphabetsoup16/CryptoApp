@@ -3,7 +3,7 @@
 
     <div class="row justify-content-center">
         <form class="coin-form mb-2">
-            <mat-form-field class=" coin-full-width bg-light rounded" appearance="fill">
+            <mat-form-field class="coin-full-width bg-light rounded" appearance="fill">
                 <mat-label>Search</mat-label>
                 <input type="text" placeholder="Enter coin name" aria-label="coin" matInput [formControl]="coinControl"
                     [matAutocomplete]="auto" (keydown.enter)="searchCoin()">
