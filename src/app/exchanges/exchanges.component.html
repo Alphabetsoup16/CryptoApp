@@ -7,7 +7,10 @@
                     <a href="{{exchange.url}}" target="_blank">
                         <img src="{{exchange.image}}" class="d-inline img-thumbnail me-2 mb-2" width="50" height="50" />
                     </a>
-                    <h3 class="d-inline card-title">{{exchange.name}}</h3>
+                    <a class="text-decoration-none" style="color: black;" href="{{exchange.url}}" target="_blank">
+                        <h3 class="d-inline card-title">{{exchange.name}}</h3>
+                    </a>
+
                     <p class="card-text"><b>Trust Score:</b> {{exchange.trust_score}}</p>
                     <p class="card-text"><b>Year Established:</b> {{exchange.year_established}}</p>
                     <p class="card-text"><b>Country:</b> {{exchange.country || "Unknown"}}</p>
