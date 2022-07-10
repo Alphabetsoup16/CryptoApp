@@ -37,10 +37,11 @@ export class CoinGeckoService {
         name: response.name,
         image: response.image['large'],
         developer_score: response.developer_score || "N/A",
-        community_score: response.community_score,
+        community_score: response.community_score || "N/A",
         genesis_date: response.genesis_date,
-        hashing_algorithm: response.hashing_algorithm,
+        hashing_algorithm: response.hashing_algorithm || "N/A",
         coin_description: response.description['en'],
+        market_data_price: response.market_data['current_price']['usd'] || "Price Unavailable"
       })))
   }
 
