@@ -6,7 +6,12 @@
         <div class="text-center">
             <img src="{{coin.image}}" class="img-thumbnail border-0" width="200" height="200" />
             <h1 class="card-title mt-1">{{coin.name}} Details</h1>
-            <h4>Current Price: {{coin.market_data_price | currency}}</h4>
+            <h4 *ngIf="coin.market_data_price > 0.0001; else elsePriceBlock">
+                <b>Current Price:</b> {{coin.market_data_price | currency}}
+            </h4>
+            <ng-template #elsePriceBlock>
+                <h4><b>Current Price:</b> ${{coin.market_data_price}}</h4>
+            </ng-template>
         </div>
         <div class="card-body">
             <div class="container">
