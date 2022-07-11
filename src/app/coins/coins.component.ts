@@ -12,7 +12,7 @@ import { map, startWith } from 'rxjs/operators';
 })
 export class CoinsComponent implements OnInit {
 
-  coinsResponse: any = [];
+  topCoinsList: any = [];
   coinControl = new FormControl('');
   filteredOptions?: Observable<any>;
 
@@ -20,7 +20,7 @@ export class CoinsComponent implements OnInit {
 
   ngOnInit(): void {
     this.coinGecko.getTop100Coins().subscribe(data => {
-      this.coinsResponse = data;
+      this.topCoinsList = data;
     })
 
     this.filteredOptions = this.coinControl.valueChanges.pipe(
@@ -36,7 +36,7 @@ export class CoinsComponent implements OnInit {
 
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
-    return this.coinsResponse.filter((coin: any) => coin.id.toLowerCase().includes(filterValue));
+    return this.topCoinsList.filter((coin: any) => coin.id.toLowerCase().includes(filterValue));
   }
 
 }
