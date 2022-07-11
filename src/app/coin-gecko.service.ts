@@ -19,9 +19,9 @@ export class CoinGeckoService {
     return this.http.get<any>(`${this.BASE_API_URL}/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false`);
   }
 
-  public getSpecificCoin(coin_id: string | null): Observable<any> {
-    return this.http.get<any>(`${this.BASE_API_URL}/coins/${coin_id}`);
-  }
+  // public getSpecificCoin(coin_id: string | null): Observable<any> {
+  //   return this.http.get<any>(`${this.BASE_API_URL}/coins/${coin_id}`);
+  // }
   //   export interface Coin {
   //     id: string,
   //     name: string,
@@ -31,7 +31,7 @@ export class CoinGeckoService {
   //     market_cap: number,
   //     circulating_supply: number,
   // }
-  public getSpecificCoin2(coin_id: string | null) {
+  public getSpecificCoin(coin_id: string): Observable<any> {
     return this.http.get(`${this.BASE_API_URL}/coins/${coin_id}`)
       .pipe(map((response: any) => ({
         name: response.name,
